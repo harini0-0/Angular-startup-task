@@ -1,0 +1,21 @@
+<div class="container">
+    <!-- <br>
+    <input type="text" class="form-control" (input)="onUpdateName($event)">
+    <input type="text" class="form-control" [(ngModel)] = "serverName">
+    <div class="p">{{serverName}}</div>
+    <div class="div">
+        <p innerText = {{serverText}}></p>
+        <button class="btn btn-primary" [disabled] = "!serverButton" (click) = "onGetServer()">Add server</button>
+    </div>
+    <div class="div">
+      <p>Sucess Alert!! Your First assignment is a sucess. </p>
+    </div> -->
+    <input type="text" class="form-control" [(ngModel)] = "userName">
+    <p *ngIf="serverButton; else noServer">Server was created! Server name is {{userName}}</p>
+    <div class="div">
+        <button class="btn btn-primary" [disabled] = "userName.length === 0" (click) = "resetUser()">Add server</button>
+    </div>
+    <ng-template #noServer>
+        <p>No Server was created!</p>
+    </ng-template>
+</div>

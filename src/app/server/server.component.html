@@ -1,0 +1,19 @@
+<div class="container" [ngStyle] = "{backgroundColor: getColor()}">
+    <p>{{"Server"}} with ID {{serverId}} is {{getServerStatus()}}</p>
+</div>
+
+<hr>
+
+<div class="container">
+    <div class="div">
+        <button class="btn btn-primary" (click) = "onPush()"> Toggle </button> 
+        <button class="btn btn-primary" (click) = "clearing()"> Clear </button>
+        <br><br>
+        <p id="secret" [ngStyle] = "{visibility: getVisibility()}">Secret Password = Tuna</p>
+        <br><br>
+        <!--without index-->
+        <p *ngFor="let numbers of serverNumbers" [ngStyle]= "{backgroundColor: numbers >= 5? 'blue' : 'white' }" [ngClass] = "{online: numbers >= 5}">{{numbers}}</p>
+        <!--with index-->
+        <p *ngFor="let dates of serverDate; let i =index" [ngStyle]= "{backgroundColor: i >= 4? 'green' : 'white' }" [ngClass] = "{online: i >= 4}">{{dates}}</p>
+    </div>
+</div>

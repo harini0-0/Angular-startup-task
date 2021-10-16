@@ -1,0 +1,10 @@
+.div{
+    color: black;
+    text-align: center;
+    padding-top: 2mm;
+}
+.container{
+    /* height: 30mm; */
+    background-color: aquamarine;
+    padding: 5mm;
+}
